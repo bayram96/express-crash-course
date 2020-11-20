@@ -5,6 +5,10 @@ const path = require('path');
 const logger = require('./middleware/logger')
 //app.use(logger);
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 //Set static folder
 app.use(express.static(__dirname + '/public'));
 
